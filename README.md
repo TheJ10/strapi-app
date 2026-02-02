@@ -90,5 +90,12 @@ http://localhost:1337/admin
 
 ---
 
+## Loom Video
+
+A walkthrough video demonstrating the Strapi local setup, admin panel, content type creation, and pull request:
+- https://www.loom.com/share/1c0440671bdf4e3db26fa9b61d49c7ba
+
+---
+
 ## Author
 Jaspal Gundla

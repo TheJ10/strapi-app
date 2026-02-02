@@ -1,64 +1,94 @@
-# 🚀 Getting started with Strapi
+# Strapi Internship Task 1 – Local Setup
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
-
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
-
-```
-npm run develop
-# or
-yarn develop
-```
-
-### `start`
-
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+## Objective
+The objective of this task is to set up Strapi locally, explore its project structure, start the admin panel, create a sample content type, and document the complete process as part of the internship training.
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Tech Stack
+- Node.js (v20)
+- Strapi (Community Edition)
+- SQLite (default database)
+- Git & GitHub
+
+---
+
+## Task Steps Performed
+
+### 1. Clone the Strapi Repository
+The official Strapi GitHub repository was cloned to explore the Strapi framework and understand its structure.
+
+```bash
+git clone https://github.com/strapi/strapi
+```
+>Note: The Strapi repository is a monorepo containing the framework source code.
+>To run Strapi locally as an application, the Strapi CLI is used.
+
+### 2. Create and Run Strapi Application Locally
+
+A new Strapi application was created using the official Strapi CLI with the quickstart option.
+```bash
+npx create-strapi@latest . --quickstart
+```
+This command:
+- Sets up a complete Strapi application
+- Uses SQLite as the default database
+- Starts the development server automatically
+
+### 3. Start Admin Panel
+After successful setup, the Strapi admin panel was accessed at:
+```bash
+http://localhost:1337/admin
+```
+An admin user was created and the dashboard was verified successfully.
+
+### 4. Create Sample Content Type
+A sample collection type named Article was created using the Content-Type Builder with the following fields:
+```text
+Field Name	Type
+title	Text
+description	Rich Text
+publishedDate	Date
+```
+
+### 5. Create Sample Entry
+A sample entry was created and published using the Content Manager to verify that the content type and database are working correctly.
+
+### 6. Explore Project Folder Structure
+The key folders of the Strapi project were explored:
+```text
+src/api/        → APIs and content types
+config/         → Application and database configuration
+database/       → Database setup (SQLite)
+public/         → Static assets
+```
+The created content type is available under:
+```text
+src/api/article
+```
+
+---
+
+## How to Run the Project Locally
+```bash
+npm install
+npm run develop
+```
+
+Admin Panel:
+```bash
+http://localhost:1337/admin
+```
+
+---
+
+## Submission Details
+- GitHub repository contains the Strapi application setup
+- A separate branch was created for this task
+- Pull Request raised from task branch to main branch
+- Loom video recorded explaining the setup and workflow
+
+---
 
 ## Author
 Jaspal Gundla
